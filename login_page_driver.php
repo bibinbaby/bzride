@@ -39,15 +39,27 @@
   </div>
   <div class="div_center">
     
-    <h3>Convenience</h3>
-    <p>Book within seconds and get instant confirmations. Easy online payments or cash on delivery. Booking car rentals will never be a headache again!</p>
-    <h3>Quality</h3>
-    <p>Our cars are audited for cleanliness, safety and comfort. Our drivers are well trained and reliable. Sit back and enjoy the BZride experience! </p>
-    
-    <ul class="header_menu">
-        <li><a href="register_drive.php">Register To Drive </a></li>
-        <li><a href="register_newuser.php">Register New User</a></li>
-    </ul>
+<table>
+      <form action="login_driver_ws.php" method="post">
+        <tr>
+          <td> User ID </td>
+          <td><input type="text" name="txtphone"/>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td> Password </td>
+          <td><input type="password" name="txtpass"/>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <th></th>
+          <td><input type="submit" value="Login"/>
+          </td>
+        </tr>
+      </form>
+    </table>
     
     
   </div>

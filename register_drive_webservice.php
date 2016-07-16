@@ -2,32 +2,42 @@
 include("includes/db.php");
 
 // Check connection
-if (!$a) {
+if (!$conn) {
     echo "Not connected";
 } 
 else{  
-//							insert values   Userid, firstname, lastname, email, pass, 
-//											addr1, addr2, ph, ssn, 
-//											vehicleyear, vehiclemodel, vehiclemake, vehiclecolor, 
-//											regno, regstate, regdate, regexpiry,
-//             								inscompany, inspolicyno, insdate, insexpiry, 
-//											licenseno, licensestate, licensedate, licenseexpiry, image, Role 
-
-
-											
-$sql = "insert into bz_driver_details values('', 'Arya', 'Intimation', 'arya@gmail.com', '1234', 
-										  'address1', 'addr2', '99478547', '999',
-										  '2014', 'q4', 'audi', 'Black',
-										  'KL-38D-3838', 'Kerala', '10-10-2014', '09-10-2024', 
-										  'National', 'klaudi445', '10-10-2015', '09-10-2016', 
-										  'lic1234', 'Kerala', '25-09-2009', '24-09-2024', 'Driver_image', 2)	";								
-											
-											
+								
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+								//insert values: ID, FIRST NAME, LAST NAME, EMAIL, PASSWORD, 
+								//ADDR1, ADDR2, PHONE, DEVICE ID , DEVICE TYPE, 
+								//IS LICENCE ACCEPTED, IS ACTIVE, STATUS, CURRENT LATTITTUDE, CURRENT LONGITUDE, CREATED BY DATE  //
+$driver_details="insert into bztbl_drivers values('', 'Athira', 's', 'myemail', 'newpassword',
+									'myaddr1', 'myaddr2', '123456789', 'new device id', 'my device type', 
+									'', '', '', '', '', '' )";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+								// insert values: ID, DRIVER ID, VEHICLE MODEL, V MAKE, V COLOUR, V YEAR, 
+								//  V REG NO, V REG STATE, V DATE REGISTERED, V EXPIRY DATE, CREATED BY DATE  //
+$driver_vehicledetais = "insert into bztbl_drivervehicledetails values('', '', 'dzire', 'Maruthy', 'supreme white', '2016', 
+									'KL-38D-1', 'Kerala', '', '', '')";																				
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+								//insert values: ID, DRIVER ID, INSURANCE COMPANY, INS PLICY NO, 
+								//INS DATE, INS EXPIRY DATE, CREATED BY DATE  //
+$driver_insdetails="insert into bztbl_driverinsurancedetails values('', '', 'National Insurance', 'hgiu87y9y', 
+									'','', ''  )";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+								//insert values: ID, DRIVER ID, LICENCE NO, LICENCE ISSUE STATE,
+								// LIC ISSUE DATE, LIC EXPIRY DATE, CREATED BY DATE  //
+$driver_licdetails="insert into bztbl_driverlicensedetails values('', '', 'kl454525', 'Karnataka', 
+									'','', ''  )";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////											
 //echo $sql;
 //exit();											
-$demo = mysql_query($sql,$conn);
+$driver_details1 = mysql_query($driver_details,$conn);
+$driver_vehicledetais1 = mysql_query($driver_vehicledetais,$conn);
+$driver_insdetails1 = mysql_query($driver_insdetails,$conn);
+$driver_licdetails1 = mysql_query($driver_licdetails,$conn);
 
-if ($demo == 1) {
+if ($driver_details1 == 1) {
     echo "New Driver added successfully";
 } else {
     //echo "Error: " . $sql . "<br>" . $conn->error;

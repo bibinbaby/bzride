@@ -13,7 +13,7 @@
     <div class="header_right_bottom">
       <ul class="header_menu">
         <li><a href="home.php">Home</a></li>
-        <li><a href="register.php">Rrgister</a></li>
+        <!--<li><a href="register.php">Register</a></li>-->
 
         <li><a href="contact_us.php">Contact Us</a></li>
       </ul>
@@ -24,7 +24,7 @@
   <div class="div_left">
     <ul class="div_left_menu">
       <li><a href="home.php">Home</a></li>
-      <li><a href="register.php">Register</a></li>
+      <!--<li><a href="register.php">Register</a></li>-->
 
       <li><a href="contact_us.php">Contact Us</a></li>
     </ul>
@@ -32,7 +32,7 @@
   <div class="div_center">
 <!--------------------------------------------------------------------------------------------------------------->
     <table border="2" >
-<caption> REGISTRATION </caption>
+<caption> <h3> REGISTRATION </h3> </caption>
 <form action="register_drive_act.php" method="post" enctype="multipart/form-data">
 
  <tr>
@@ -91,14 +91,14 @@
 </td>
  </tr>
  
-  <tr>
+<!--  <tr>
 <td> Social Security No: </td>
 <td> <input type="text" name="txtssn"id="txtssn" />
 <br />
 </td>
- </tr>
+ </tr>-->
  <!--------------------------------------------------------------------------->
- <tr><td></td> <td> VEHICLES DETAILS</td></tr>
+ <tr><td></td> <td> <b>VEHICLES DETAILS</b></td></tr>
  
   <tr>
 <td> Year </td>
@@ -128,7 +128,7 @@
 </td>
  </tr>
  <!-------------------------------------------------------------------------->
-  <tr><td></td> <td> REGISTRATION DETAILS</td></tr>
+  <tr><td></td> <td> <b>REGISTRATION DETAILS</td></tr></b>
  
   <tr>
 <td> Registration No: </td>
@@ -158,7 +158,7 @@
 </td>
  </tr>
  <!-------------------------------------------------------------------------->
-   <tr><td></td> <td> INSURANCE DETAILS</td></tr>
+   <tr><td></td> <td> <b>INSURANCE DETAILS</td></tr></b>
  
   <tr>
 <td> Insurance Company </td>
@@ -188,7 +188,7 @@
 </td>
  </tr>
  <!-------------------------------------------------------------------------->
-    <tr><td></td> <td> LICENCE DETAILS</td></tr>
+    <tr><td></td> <td> <b>LICENCE DETAILS</td></tr></b>
  
   <tr>
 <td> Licence No: </td>
@@ -218,13 +218,13 @@
 </td>
  </tr>
  <!-------------------------------------------------------------------------->
-  <tr>
+<!--  <tr>
 <td> Upload Photo </td>
 
 <td><input type="file" name="image"id="image" />
 <br />
 </td>
- </tr>
+ </tr>-->
  
  <tr>
  <tr>
@@ -245,7 +245,7 @@
     
   </div>
 
-  <div class="div_right">
+  <!--<div class="div_right">
     <div class="latest_blog">
       <h3> Latest News</h3>
       <div class="div_blog_top">
@@ -264,13 +264,13 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
       </div>
     </div>
-  </div>
+  </div>-->
 </div>
 <div class="footer"> 
 	<div class="footer_menu">
     	 <ul class="header_menu">
         <li><a href="home.php">Home</a></li>
-        <li><a href="register.php">Register</a></li>
+        <!--<li><a href="register.php">Register</a></li>-->
 
         <li><a href="contact_us.php">Contact Us</a></li>
       </ul>

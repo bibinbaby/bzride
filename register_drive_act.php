@@ -30,24 +30,37 @@ $licensestate= $_POST["txtlicensestate"];
 $licensedate= $_POST["txtlicenseissue"];
 $licenseexpiry= $_POST["txtlicenseexpiry"];
 
-$image=$_FILES["image"]["name"];
+//$image=$_FILES["image"]["name"];
 move_uploaded_file($_FILES['image']['tmp_name'],"upload/".$_FILES['image']['name']);
 /*$licence= $_POST["licence"];*/
 
 include("includes/db.php");
 
-$q="insert into bz_driver_details values('', '$firstname', '$lastname', '$email', '$password',
-									'$addr1', '$addr2', '$ph', '$ssn',
-									'$vehicleyear', '$vehiclemodel', '$vehiclemake', '$vehiclecolor',
-									'$regno', '$regstate', '$regdate', '$regexpiry',
-									'$inscompany', '$inspolicyno', '$insdate', '$insexpiry',
-									'$licenseno', '$licensestate', '$licensedate', '$licenseexpiry',
-									'$image', 2)";
-									echo $q;
-									exit();
-$r=mysql_query($q,$conn);
+		//insert values: ID, FIRST NAME, LAST NAME, EMAIL, PASSWORD, ADDR1, ADDR2, PHONE, DEVICE ID , DEVICE TYPE, 
+		//IS LICENCE ACCEPTED, IS ACTIVE, STATUS, CURRENT LATTITTUDE, CURRENT LONGITUDE, CREATED BY DATE  //
+$driver_details="insert into bztbl_drivers values('', '$firstname', '$lastname', '$email', '$password',
+									'$addr1', '$addr2', '$ph', '', '', '', '', '', '', '', '' )";
+									
+		// insert values: ID, DRIVER ID, VEHICLE MODEL, V MAKE, V COLOUR, V YEAR, 
+		//  V REG NO, V REG STATE, V DATE REGISTERED, V EXPIRY DATE, CREATED BY DATE  //
+$driver_vehicledetais = "insert into bztbl_drivervehicledetails values('', '', '$vehiclemodel', '$vehiclemake', '$vehiclecolor', '$vehicleyear', 
+									'$regno', '$regstate', '$regdate', '$regexpiry', '')";									
+									
+		//insert values: ID, DRIVER ID, INSURANCE COMPANY, INS PLICY NO, INS DATE, INS EXPIRY DATE, CREATED BY DATE  //							
+$driver_insdetails="insert into bztbl_driverinsurancedetails values('', '', '$inscompany', '$inspolicyno', 
+									'$insdate','$insexpiry', ''  )";
+									
+		//insert values: ID, DRIVER ID, LICENCE NO, LICENCE ISSUE STATE, LIC ISSUE DATE, LIC EXPIRY DATE, CREATED BY DATE  //
+$driver_licdetails="insert into bztbl_driverlicensedetails values('', '', '$licenseno', '$licensestate', 
+									'$licensedate','$licenseexpiry', ''  )";											
 
-if($r==1)
+
+$driver_details1 = mysql_query($driver_details, $conn);
+$driver_vehicledetais1 = mysql_query($driver_vehicledetais, $conn);
+$driver_insdetails1 = mysql_query($driver_insdetails, $conn);
+$driver_licdetails1 = mysql_query($driver_licdetails, $conn);
+
+if($driver_details1 == 1)
 {
 $_SESSION['msg']="Successfully Registered";
 header("location:home.php");

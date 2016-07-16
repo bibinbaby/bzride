@@ -13,7 +13,7 @@
     <div class="header_right_bottom">
       <ul class="header_menu">
         <li><a href="home.php">Home</a></li>
-        <li><a href="register.php">Rrgister</a></li>
+        <!--<li><a href="register.php">Register</a></li>-->
 
         <li><a href="contact_us.php">Contact Us</a></li>
       </ul>
@@ -24,7 +24,7 @@
   <div class="div_left">
     <ul class="div_left_menu">
       <li><a href="home.php">Home</a></li>
-      <li><a href="register.php">Register</a></li>
+      <!--<li><a href="register.php">Register</a></li>-->
 
       <li><a href="contact_us.php">Contact Us</a></li>
     </ul>
@@ -32,7 +32,7 @@
   <div class="div_center">
 <!--------------------------------------------------------------------------------------------------------------->
     <table border="2" >
-<caption> REGISTRATION </caption>
+<caption> <h3>REGISTRATION</h3> </caption>
 <form action="register_newuser_act.php" method="post" enctype="multipart/form-data">
 
  <tr>
@@ -69,7 +69,7 @@
 <br />
 </td>
  </tr>
- 
+ <!---------------------------------------------------------------------------------------->
   <tr>
 <td> Address 1 </td>
 <td> <textarea rows="4" cols="50" name="txtaddr1" id="txtaddr1" ></textarea>
@@ -97,7 +97,8 @@
 <br />
 </td>
  </tr>
- <tr><td></td><td> CARD DETAILS</td></tr>
+ <!---------------------------------------------------------------------------------------------->
+  <tr><td></td><td><b> CARD DETAILS</td></tr></b>
   <tr>
 <td> Card Type </td>
 <td> <input type="radio" name="cardtype" value="credit" id="r1" />Credit Card
@@ -180,7 +181,7 @@
     
   </div>
 
-  <div class="div_right">
+  <!--<div class="div_right">
     <div class="latest_blog">
       <h3> Latest News</h3>
       <div class="div_blog_top">
@@ -199,13 +200,13 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
       </div>
     </div>
-  </div>
+  </div>-->
 </div>
 <div class="footer"> 
 	<div class="footer_menu">
     	 <ul class="header_menu">
         <li><a href="home.php">Home</a></li>
-        <li><a href="register.php">Register</a></li>
+        <!--<li><a href="register.php">Register</a></li>-->
 
         <li><a href="contact_us.php">Contact Us</a></li>
       </ul>
